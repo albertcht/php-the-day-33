@@ -1,15 +1,15 @@
 <?php
 
-use Swoole\Server;
+use Swoole\Http\Server;
 
-$http = new Swoole\Http\Server("127.0.0.1", 9501);
+$http = new Server("127.0.0.1", 9501);
 
 // you must set task_worker_num before use task worker
 // $http->set([
 //     'task_worker_num' => 4
 // ]);
 
-$http->on("start", function ($server) {
+$http->on("start", function (Server $server) {
     echo "Swoole http server is started at http://127.0.0.1:9501\n";
     // don't define any global variables here
 });
