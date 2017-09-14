@@ -56,7 +56,7 @@ $http->on("request", function ($request, $response) {
     // ];
     // $globalServer->task($data);
     $response->header("Content-Type", "text/html");
-    $response->end('Hello World!');
+    $response->end("Hello World!");
 });
 
 $http->start();

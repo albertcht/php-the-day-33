@@ -1,16 +1,10 @@
 var http = require('http');
 
-var data = {
-  'code': 'ok',
-  'error': false,
-  'payload': 'Hello World'
-};
-
 var app = function (req, res) {
   res.writeHead(200, {
-    'Content-Type': 'application/json'
+    'Content-Type': 'text/html'
   });
-  res.end(JSON.stringify(data));
+  res.end('hello world');
 };
 
 var server = http.createServer(app);
