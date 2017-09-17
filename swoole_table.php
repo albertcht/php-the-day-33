@@ -1,8 +1,6 @@
 <?php
 
-use Swoole\Http\Server;
 use Swoole\Table;
-use Swoole\Process;
 
 $table = new Table(1024);
 $table->column('id', swoole_table::TYPE_INT, 4);
